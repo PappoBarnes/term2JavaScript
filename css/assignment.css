@@ -1,0 +1,36 @@
+fieldset{
+	/*margin:1.5;*/
+	width:40%;
+	height:auto;
+	/*color:red;*/
+	/*background-color: blue;*/
+	/*font-size: 2.0em;*/
+	margin-left:auto;
+	margin-right:auto;
+
+}
+
+#result, #priceResult #distanceResult{
+	display: grid;
+	grid-template-columns: 1fr;
+	margin: 0 auto;
+	width:40%;
+	height:auto;
+	font-size:2em;
+	padding: .3em;
+	border:green dashed 1px;
+}
+
+div
+{
+	width:auto;
+	margin:0 auto;
+	font-size: 2em;
+	height:auto;
+	border:green dashed 1px;
+}
+
+form#loadPopup{
+	width:200px;
+	height:200px;
+}

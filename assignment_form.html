@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Hotel Search Assignment</title>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<link rel="stylesheet" type="text/css" href="css/assignment.css"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/assignment.css">
+		<!-- <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet"> -->
+		<!-- <link href="https://fonts.googleapis.com/css?family=Prata" rel="stylesheet"> -->
+		<!-- <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet"> -->
+
+	</head>
+	<body>
+		<header>
+			<script src="js/formPopup.js" type="text/javascript"></script>
+		 
+		</form>
+		</header>
+		<content>
+		<form>
+			
+		</fieldset>
+		<fieldset>
+			<Legend>Room Genie Comparison App</Legend>
+			<label for="search">Enter the Hotel by name...</label>
+			<input id="search" type="text" placeholder="Hotel Name..."></input>
+			
+			
+		</fieldset>
+		<fieldset>
+			<label>Select a Star Rating</label>
+			<select id="ratingRange" value="">
+				<option value="5">5</option>
+				<option value="4">4</option>
+				<option value="3">3</option>
+				<option value="2">2</option>
+				<option value="1">1</option>
+			</select>
+			
+		</fieldset>
+		<fieldset>
+			<label for="priceRange">Select a nightly budget</label> <br/>
+			£0<input id="priceRange" type="range"  min="0" max="300" step="5" value="35"/>£300
+			<!-- <p id="result"></p> -->
+			<!-- <button id="priceButton" type="button">Check Price</button> -->
+			<div id="priceResult"></div>
+			
+		</fieldset>
+		<fieldset>
+			<label for="distanceRange">Distance from the City Center</label><br/>
+			0<input type="range" id="distanceRange" min="0" max="12" step="1" value="6">12
+			<div id="distanceResult"></div>
+		</fieldset>
+		<fieldset>
+			
+			<legend>Whould you like Wifi</legend>
+			<label for="wifiYes">Yes</label>
+			<input type="radio" name="question" id="wifiYes" value="Yes"/>
+			<label for="WifiNo">No</label>
+			<input type="radio" name="question" id="wifiNo" value="No"/>
+		</fieldset>
+		<fieldset>
+			<legend>Whould you like a Pool</legend>
+			<label for="Yes">Yes</label>
+			<input type="radio" name="question_2" id="poolYes" value="Yes"/>
+			<label for="No">No</label>
+			<input type="radio" name="question_2" id="poolNo" value="No"/>
+			<button id="searchButton" type="button">Search</button>
+			<!-- <script src="js/processForm_test.js" type="text/javascript"></script> -->
+			<script src="js/processForm.js" type="text/javascript"></script>
+		</fieldset>
+		
+		<div id="result">
+			
+		</div>
+		
+	</form>
+	</content>
+</body>
+</html>
