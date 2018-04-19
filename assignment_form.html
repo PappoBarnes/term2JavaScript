@@ -17,14 +17,14 @@
 		 
 		</form>
 		</header>
-		<content>
+		<content id="threeColGrid">
 		<form>
 			
 		</fieldset>
 		<fieldset>
 			<Legend>Room Genie Comparison App</Legend>
-			<label for="search">Enter the Hotel by name...</label>
-			<input id="search" type="text" placeholder="Hotel Name..."></input>
+		<!-- 	<label for="search">Enter the Hotel by name...</label>
+			<input id="search" type="text" placeholder="Hotel Name..."></input> -->
 			
 			
 		</fieldset>
@@ -54,28 +54,35 @@
 		</fieldset>
 		<fieldset>
 			
-			<legend>Whould you like Wifi</legend>
+			<legend>Would you like Wifi</legend>
 			<label for="wifiYes">Yes</label>
 			<input type="radio" name="question" id="wifiYes" value="Yes"/>
 			<label for="WifiNo">No</label>
 			<input type="radio" name="question" id="wifiNo" value="No"/>
 		</fieldset>
 		<fieldset>
-			<legend>Whould you like a Pool</legend>
+			<legend>Would you like a Pool</legend>
 			<label for="Yes">Yes</label>
 			<input type="radio" name="question_2" id="poolYes" value="Yes"/>
 			<label for="No">No</label>
 			<input type="radio" name="question_2" id="poolNo" value="No"/>
-			<button id="searchButton" type="button">Search</button>
+			<!-- <button id="searchButton" type="button">Search</button> -->
 			<!-- <script src="js/processForm_test.js" type="text/javascript"></script> -->
-			<script src="js/processForm.js" type="text/javascript"></script>
+			<!-- <script src="js/processForm_10_04.js" type="text/javascript"></script> -->
+				<!-- <script src="js/processForm_test_v2.js" type="text/javascript"></script> -->
+			<!-- <button type="button" onClick="window.load()">Reset</button> -->
+			<button id="resetButton" type="reset" onClick="window.location.reload();">Reset Page</button>
 		</fieldset>
 		
-		<div id="result">
+	</form>
+	<div id="button">
+		<button id="searchButton" type="submit">Search</button>
+		<script src="js/processForm_test_v1.js" type="text/javascript"></script>
 			
 		</div>
-		
-	</form>
+	<div id="result">
+			
+		</div>
 	</content>
 </body>
 </html>
