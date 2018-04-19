@@ -49,72 +49,82 @@ hotels.push(new Hotel("Queens Hotel",2,25,3,"No","No"));
 ////////////////////////////////////////////////////
 ////////////DATA CAPTURE////////////////////////////
 ////////////////////////////////////////////////////
+function getUserPrefrences(){
+	// let price=document.getElementById("priceRange").value;
+	let starRating=document.getElementById("ratingRange").value;
+		console.log(starRating)
+		// return price;
+		return starRating;	
+		// return price;
+	
 
-function getUserRating(){
-	let ratingRange=document.getElementById("ratingRange").value;
-		console.log(ratingRange);
-		return ratingRange;
-}
-
-function getBudget(){
-	let budget=document.getElementById("priceRange").value;
-		console.log(budget);
-		return budget;
 }
 ////////////////////////////////////////////////////
 ////////////FILTERING///////////////////////////////
 ////////////////////////////////////////////////////
-function filterResults(ratingRange, budget){
-	let matchRating=hotels.filter(function(userRating){
-		if (userRating.rating==ratingRange){
+function filterResults(starRating){
+	let filterRating=hotels.filter(function(userRating){
+		if(userRating.rating===starRating){
 			return true;
 		}
-		return false;
-
-	})
-	return matchRating;
-
-
-	let nightBudget=matchRating.filter(function(priceFilter){
-			if (priceFilter.pricePerNight<=budget){
-				return true;
-			}
 			return false;
 	})
-	return nightBudget;
+	console.log(filterRating)
+	return filterRating;
+
+	// let filterPrice=filterRating.filter(function(userPrice){
+	// 	if (userPrice.pricePerNight<=price){
+	// 		return true;
+	// 	}
+	// 	return false;
+	// })
+	// return filterPrice;
 }
 ////////////////////////////////////////////////////
 ////////////RESULTS/////////////////////////////////
 ////////////////////////////////////////////////////
-function displayResults(matchingRating){
-	if(matchingRating.length>0){
+function displayResults(filterRating){
+	if(filterRating.length>0){
 		console.log(`Success`)
-		matchingRating.forEach(function(rating){
-			console.log(rating);
+		filterRating.forEach(function(ratingChoice){
+			console.log(ratingChoice);
 		})
 	}else{
 	console.log(`No Match Found!`)
 	}
 
 }
+// function displayResults(filterPrice){
+// 	if(filterPrice.length>0){
+// 		console.log(`Success`)
+// 		filterPrice.forEach(function(priceFilter){
+// 			console.log(priceFilter.name);
+// 		})
+// 	}else{
+// 	console.log(`No Match Found!`)
+// 	}
+
+// }
 ////////////////////////////////////////////////////
 ////////////RUN PROGRAM/////////////////////////////////
 ////////////////////////////////////////////////////
 function program(){
-	const userRating=getUserRating();
-	const budget=getBudget();
-	const matchingResults=filterResults(userRating);
+	const userPref=getUserPrefrences();
+	const matchingResults=filterResults(userPref);
 	displayResults(matchingResults);
 
 }
 
-
+//////////////BUTTON ELEMENT///////////////////
 const searchBtn=document.getElementById("searchButton");
 searchBtn.addEventListener("click",function(){
 	program()
 	// console.log(searchButton)
 	
 })
+
+///////////////////////////////////////////////
+
 
 
 // function getPricePer(){

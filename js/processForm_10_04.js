@@ -16,7 +16,7 @@ hotels.push(new Hotel("The Grand",5,190,0.5,"Yes","No"));
 hotels.push(new Hotel("The Plaza",4,70,1,"Yes","Yes"));
 hotels.push(new Hotel("The Lord Milburn",4,65,5,"Yes","No"));
 hotels.push(new Hotel("The Grange",3,57,1,"Yes","No"));
-hotels.push(new Hotel("The Windmill",1,5,10,"No","No"));
+hotels.push(new Hotel("The Windmill",1,5,10,"Yes","No"));
 hotels.push(new Hotel("The Excel",3,56, 0.5,"Yes","No"));
 hotels.push(new Hotel("The Ritz",2,14,5,"Yes","No"));
 hotels.push(new Hotel("The Victoria",4,80,0.5,"Yes","No"));
@@ -49,114 +49,96 @@ hotels.push(new Hotel("Queens Hotel",2,25,3,"No","No"));
 ////////////////////////////////////////////////////
 ////////////Search Processing///////////////////////
 ////////////////////////////////////////////////////
-function processSearch(){
-// 		const searchTerm=document.getElementById("search").value;
-// 		// console.log(`You entered ${searchTerm}`);
-// 		let searchValue=hotels.filter(function(hotelOption){
-// 			if (hotelOption.name===searchTerm)
-// 			{
-// 			return true;
-// 			}
-// 			else 
-// 			{
-// 			return false;
-// 			}
-// })
-// console.log(searchValue);
+function processData(){
+
 ////////////////////////////////////////////////////
-////////////Rating Processing///////////////////////
+////////////Data Processing///////////////////////
 ////////////////////////////////////////////////////
 		let userRating=document.getElementById("ratingRange").value;
-				console.log(userRating); // The value e.g. 1-5
+					console.log(userRating); // The value e.g. 1-5
+		let pricePer = document.getElementById("priceRange").value;
+    				console.log(pricePer);
+    	let distanceFrom = document.getElementById("distanceRange").value;
+    				console.log(distanceFrom);
+		let selectedRadBtnWifi=document.querySelector('input[name="question"]:checked');
+					console.log(selectedRadBtnWifi);
+		let selectedRadBtnPool=document.querySelector('input[name="question_2"]:checked');
+					console.log(selectedRadBtnPool);
+}
+////////////////////////////////////////////////////
+///////////////Filter Processing/////////////////////
+////////////////////////////////////////////////////
+function filterData(userRating, pricePer){
 		let userChoice=hotels.filter(function(ratingOption){
-				if(ratingOption.rating==userRating){
+			if(ratingOption.rating==userRating){
 				return true;
-				return userChoice.name;
 				}
-				else 
-				{
 				return false;
-				}
+				})
+		return userChoice;
 
-})
-console.log(userChoice);
-// console.log(userRating);
-////////////////////////////////////////////////////
-///////////////Price Processing/////////////////////
-////////////////////////////////////////////////////
-		const pricePer = document.getElementById("priceRange").value;
-    				// console.log(pricePer);
+		
     	let priceValue=userChoice.filter(function(priceOption){
-			if (priceOption.pricePerNight<=pricePer)
-			{
-			return true;
-			}
-			else 
-			{
-			return false;
-			}		
-})
-console.log(pricePer);
-console.log(priceValue);
+			if (priceOption.pricePerNight<=pricePer){
+				return true;
+				}
+				return false;
+				})	
+	return priceValue;}
 ////////////////////////////////////////////////////
 /////////////Distance Processing///////////////////////
 ////////////////////////////////////////////////////	
-		const distanceFrom = document.getElementById("distanceRange").value;
-    				// console.log(pricePer);
-    	let distanceValue=priceValue.filter(function(distanceOption){
-			if (distanceOption.distanceFromCity<=distanceFrom)
-			{
-			return true;
-			}
-			else 
-			{
-			return false;
-			}		
-})
-console.log(distanceFrom);
-console.log(distanceValue);
-////////////////////////////////////////////////////
-////////////WiFi Processing/////////////////////////
-////////////////////////////////////////////////////
-		const selectedRadBtnWifi=document.querySelector('input[name="question"]:checked');
-			// console.log(selectedRadBtn);
-		let wifiChoice=distanceValue.filter(function(wifiOption){
-			if(wifiOption.wifi===selectedRadBtnWifi.value){
-			return true;
-			}
-			// console.log("success");
-			return false;
+		
+//     	let distanceValue=priceValue.filter(function(distanceOption){
+// 			if (distanceOption.distanceFromCity<=distanceFrom){
+// 				return true;
+// 				}
+// 				return false;
+// 				})
+//     	// return distanceValue;	
+// console.log(distanceFrom);
+// console.log(distanceValue);
+// ////////////////////////////////////////////////////
+// ////////////WiFi Processing/////////////////////////
+// ////////////////////////////////////////////////////
+// 		let wifiChoice=distanceValue.filter(function(wifiOption){
+// 			if(wifiOption.wifi===selectedRadBtnWifi.value){
+// 				return true;
+// 				}
+// 				// console.log("success");
+// 				return false;
 
-})
-console.log(wifiChoice);
+// })
+// 		// return wifiChoice;
+// console.log(wifiChoice);
+// ////////////////////////////////////////////////////
+// //////////Pool Processing///////////////////////////
+// ////////////////////////////////////////////////////
+// 		let poolChoice=wifiChoice.filter(function(poolOption){
+// 			if(poolOption.pool===selectedRadBtnPool.value){
+// 			return true;
+// 			}
+// 			// console.log("success");
+// 			return false;
+
+// 			})
+// 		// return poolChoice;
+// console.log(poolChoice);
+
+// const divElem = document.getElementById("result");
+// const data = (poolChoice)
+// const newUl = document.createElement("ul");
+
+// data.forEach(function(result){
+//     const newLi = document.createElement("li");
+//     newLi.appendChild(document.createTextNode(result.name));
+//     newUl.appendChild(newLi);
+// })
+// divElem.appendChild(newUl);
+
+
 ////////////////////////////////////////////////////
-//////////Pool Processing///////////////////////////
-////////////////////////////////////////////////////
-		const selectedRadBtnPool=document.querySelector('input[name="question_2"]:checked');
-		// console.log(selectedRadBtn);
-		let poolChoice=wifiChoice.filter(function(poolOption){
-			if(poolOption.pool===selectedRadBtnPool.value){
-			return true;
-			}
-			// console.log("success");
-			return false;
-
-})
-console.log(poolChoice);
-
-
-const divElem = document.getElementById("result");
-const data = (poolChoice)
-const newUl = document.createElement("ul");
-
-data.forEach(function(result){
-    const newLi = document.createElement("li");
-    newLi.appendChild(document.createTextNode(result.name));
-    newUl.appendChild(newLi);
-})
-divElem.appendChild(newUl); 
-////////////////////////////////////////////////////
-}//END OF FUNCTION//
+// }//END OF FUNCTION//
 ////////////////////////////////////////////////////
 
 
@@ -169,15 +151,19 @@ divElem.appendChild(newUl);
 // 		divElem.appendChild(newList)
 // 	})
 
-// }
 
+function program(){
+	let result = processData();
+	let filterChoices=filterData(result);
+	displayResults(filterChoices);
+}
 ////////////////////////////////////////////////////
 /////////////Search Button Event Listner////////////
 ////////////////////////////////////////////////////
 const searchBtn=document.getElementById("searchButton");
 searchBtn.addEventListener("click",function(){
 	// console.log(searchTerm);
-	processSearch();
+	program();
 	
 })
 
