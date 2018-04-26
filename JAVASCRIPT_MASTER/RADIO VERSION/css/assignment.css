@@ -1,0 +1,61 @@
+/*///////STRUCTURE TAGS//////////////*/
+form{
+border: green dashed 1px;
+}
+fieldset{
+/*margin:1.5;*/
+width:auto;
+height:auto;
+/*color:red;*/
+/*background-color: blue;*/
+/*font-size: 2.0em;*/
+padding-bottom: 15%;
+border-style: none;
+}
+div
+{
+width:auto;
+margin:0 auto;
+font-size: 2em;
+height:auto;
+
+}
+ul{
+	height:30px;
+}
+li{
+	/*text-decoration-style: none;*/
+	list-style: none;
+}
+/*form#loadPopup{
+width:200px;
+height:200px;
+}*/
+/*///////ID///////////////*/
+#threeColGrid{
+display:grid;
+grid-template-columns: 1fr 1fr 1fr;
+border:green dashed 1px;
+}
+#button{}
+#result{
+display: grid;
+grid-template-columns: 1fr;
+/*grid-template-rows: 1fr repeat;*/
+margin: 0 auto;
+width:100%;
+height:100%;
+font-size:2em;
+border:green dashed 1px;
+font-size: 16px;
+}
+#priceResult #distanceResult{
+display: grid;
+grid-template-columns: 1fr;
+margin: 0 auto;
+width:40%;
+height:10px;
+font-size:2em;
+padding: .3em;
+/*border:green dashed 1px;*/
+}
