@@ -66,27 +66,35 @@ function getDistance(){
 		return distance;
 }
 function getWifi(){
-	const selectedRadBtnWifi=document.querySelector('input[name="question"]:checked');
-		if(selectedRadBtnWifi.value===null){
-			 const msg = '<span style="color:red;">You must select a WiFi option</span><br /><br />';
-                    document.getElementById('result').innerHTML = msg;
-                    // let x = document.getElementById("myRadio").required;
-                    return false
+		const selectedWifi=document.getElementById("wifiYes");
+				if (selectedWifi.checked===true){
+	// const selectedRadBtnWifi=document.querySelector('input[name="question"]:checked');
+	// 	if(selectedRadBtnWifi.value===null){
+	// 		 const msg = '<span style="color:red;">You must select a WiFi option</span><br /><br />';
+ //                    document.getElementById('result').innerHTML = msg;
+ //                    // let x = document.getElementById("myRadio").required;
+                    console.log(selectedWifi);
+                    return selectedWifi;
+                }
+                else return false
 		}
-	console.log(selectedRadBtnWifi);
-	return selectedRadBtnWifi;
-}
+	
+
  function getPool(){
-	const selectedRadBtnPool=document.querySelector('input[name="question_2"]:checked');
-	console.log(selectedRadBtnPool);
-	return selectedRadBtnPool;
+	const selectedPool=document.getElementById("poolYes");
+			if(selectedPool.checked===true){
+				console.log(selectedPool);
+				return selectedPool;
+			}else return false
+	// console.log(selectedPool);
+	// return selectedPool;
 }
 ////////END OF CAPTURE FUNCTIONS////////////////////
 ////////////////////////////////////////////////////
 ////////////////////////////////////////////////////
 ////////////FILTERING///////////////////////////////
 ////////////////////////////////////////////////////
-function filterResults(ratingRange,budget,distance,selectedRadBtnWifi,selectedRadBtnPool){
+function filterResults(ratingRange,budget,distance,selectedWifi,selectedPool){
 	let matchRating=hotels.filter(function(userRating){
 		if (userRating.rating==ratingRange){
 			return true;
@@ -109,7 +117,7 @@ function filterResults(ratingRange,budget,distance,selectedRadBtnWifi,selectedRa
 			})
 	// return matchDistance;
 	let matchWifi=matchDistance.filter(function(userWifi){
-			if(userWifi.wifi===selectedRadBtnWifi.value||selectedRadBtnWifi.value==null){
+			if(userWifi.wifi==selectedWifi.checked){
 			return true;
 			}
 			// console.log("success");
@@ -118,7 +126,7 @@ function filterResults(ratingRange,budget,distance,selectedRadBtnWifi,selectedRa
 
  		// return matchWifi;
  		let matchPool=matchWifi.filter(function(userPool){
-			if(userPool.pool===selectedRadBtnPool.value){
+			if(userPool.pool==selectedPool.checked){
 			return true;
 			}
 			// console.log("success");
@@ -141,13 +149,10 @@ function displayResults(matchPool){
 			const data = (result)
 			const newUl = document.createElement("ul");
     		const newLi = document.createElement("li");
-    		// const img = document.createElement("img");
-    		newLi.appendChild(document.createTextNode(` ${result.name} is available - £ ${result.pricePerNight} Per Night.`));
+    		newLi.appendChild(document.createTextNode(` ${result.name} is available - ${result.pricePerNight} Per Night.`));
     		newUl.appendChild(newLi);
-    		// img.appendChild("src","images/"+result.name+".jpg");
-    		// divElem.appendChild(img);
-divElem.appendChild(newUl); 
 
+divElem.appendChild(newUl); 
 })
 	}else{
 		 const msg = 'No Matches Found.';
@@ -161,6 +166,17 @@ divElem.appendChild(newUl);
 	}
 
 }
+
+// const divElem = document.getElementById("result");
+// const data = (result)
+// const newUl = document.createElement("ul");
+
+// data.forEach(function(result){
+//     const newLi = document.createElement("li");
+//     newLi.appendChild(document.createTextNode(result.name));
+//     newUl.appendChild(newLi);
+// })
+// divElem.appendChild(newUl); 
 ////////////END OF RESULTS ///////////////////////
 //////////////////////////////////////////////////
 //////////////////////////////////////////////////
@@ -195,6 +211,44 @@ function checkSubmit(e) {
    }
 }
 checkSubmit();
+// const selectMenu  = document.getElementById("ratingRange");
+// selectMenu.addEventListener("change",function(){
+//   program()
+// })
 
+
+//////// END OF RESULTS FUNCTION//////////////
+
+
+
+// const divElem = document.getElementById("result");
+// const data = (poolChoice)
+// const newUl = document.createElement("ul");
+
+// data.forEach(function(result){
+//     const newLi = document.createElement("li");
+//     newLi.appendChild(document.createTextNode(result.name));
+//     newUl.appendChild(newLi);
+// })
+// divElem.appendChild(newUl); 
+// ////////////////////////////////////////////////////
+// }//END OF FUNCTION//
+////////////////////////////////////////////////////
+
+
+// function resultPrint(poolChoice){
+// 	const divElem = document.getElementById("result");
+	
+// 	poolChoice.forEach(function(results){
+// 		const newList = document.createElement("ul");
+// 		newList.appendChild(document.createTexNode(results));
+// 		divElem.appendChild(newList)
+// 	})
+
+// }
+
+////////////////////////////////////////////////////
+/////////////Search Button Event Listner////////////
+////////////////////////////////////////////////////
 
 

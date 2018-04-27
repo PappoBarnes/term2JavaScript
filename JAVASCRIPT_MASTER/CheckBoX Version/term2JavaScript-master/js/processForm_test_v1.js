@@ -141,13 +141,10 @@ function displayResults(matchPool){
 			const data = (result)
 			const newUl = document.createElement("ul");
     		const newLi = document.createElement("li");
-    		// const img = document.createElement("img");
-    		newLi.appendChild(document.createTextNode(` ${result.name} is available - £ ${result.pricePerNight} Per Night.`));
+    		newLi.appendChild(document.createTextNode(` ${result.name} is available - ${result.pricePerNight} Per Night.`));
     		newUl.appendChild(newLi);
-    		// img.appendChild("src","images/"+result.name+".jpg");
-    		// divElem.appendChild(img);
-divElem.appendChild(newUl); 
 
+divElem.appendChild(newUl); 
 })
 	}else{
 		 const msg = 'No Matches Found.';
@@ -161,6 +158,17 @@ divElem.appendChild(newUl);
 	}
 
 }
+
+// const divElem = document.getElementById("result");
+// const data = (result)
+// const newUl = document.createElement("ul");
+
+// data.forEach(function(result){
+//     const newLi = document.createElement("li");
+//     newLi.appendChild(document.createTextNode(result.name));
+//     newUl.appendChild(newLi);
+// })
+// divElem.appendChild(newUl); 
 ////////////END OF RESULTS ///////////////////////
 //////////////////////////////////////////////////
 //////////////////////////////////////////////////
@@ -195,6 +203,44 @@ function checkSubmit(e) {
    }
 }
 checkSubmit();
+// const selectMenu  = document.getElementById("ratingRange");
+// selectMenu.addEventListener("change",function(){
+//   program()
+// })
 
+
+//////// END OF RESULTS FUNCTION//////////////
+
+
+
+// const divElem = document.getElementById("result");
+// const data = (poolChoice)
+// const newUl = document.createElement("ul");
+
+// data.forEach(function(result){
+//     const newLi = document.createElement("li");
+//     newLi.appendChild(document.createTextNode(result.name));
+//     newUl.appendChild(newLi);
+// })
+// divElem.appendChild(newUl); 
+// ////////////////////////////////////////////////////
+// }//END OF FUNCTION//
+////////////////////////////////////////////////////
+
+
+// function resultPrint(poolChoice){
+// 	const divElem = document.getElementById("result");
+	
+// 	poolChoice.forEach(function(results){
+// 		const newList = document.createElement("ul");
+// 		newList.appendChild(document.createTexNode(results));
+// 		divElem.appendChild(newList)
+// 	})
+
+// }
+
+////////////////////////////////////////////////////
+/////////////Search Button Event Listner////////////
+////////////////////////////////////////////////////
 
 
