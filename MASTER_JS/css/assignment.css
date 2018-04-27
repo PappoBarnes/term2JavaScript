@@ -1,0 +1,134 @@
+
+/*////////////////////////////
+font-family: 'Faster One', cursive;
+font-family: 'Fontdiner Swanky', cursive;
+font-family: 'Ranchers', cursive;
+/////////////////////////////
+/////////Color////////
+Button-#EBF65B
+Button Text #660CE8
+////////Global/////////////*/
+*{
+
+}
+body{
+height:900px;
+background-repeat:no-repeat;
+background: linear-gradient(135deg, #eade35 0%,#71ceef 50%,#21b4e2 51%,#380bea 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eade35', endColorstr='#380bea',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */;*/
+}
+/*///////STRUCTURE TAGS//////////////*/
+
+header{
+	border-radius:30px;
+	display:grid;
+	grid-template-columns: 1fr 4fr;
+	height:102px;
+	border-bottom: 3px white solid;
+}
+header img{
+	padding-left: 3%;
+	border-radius:30px;
+	max-width: 200px;
+	max-height: 100px;
+
+}
+form{
+	border-radius:30px;
+	background-color: white;
+    margin-top: 3%;
+    margin-left: 6%
+/*border: green dashed 1px;*/
+}
+legend{
+color:#660CE8;
+font-family: 'Ranchers', cursive;
+}
+fieldset{
+font-family: 'Fontdiner Swanky', cursive;
+/*margin:1.5;*/
+width:auto;
+height:auto;
+/*color:red;*/
+/*background-color: blue;*/
+/*font-size: 2.0em;*/
+padding-bottom: 10%;
+border-style: none;
+}
+div
+{
+width:auto;
+margin:0 auto;
+font-size: 2em;
+height:auto;
+
+}
+h1#titleBanner{
+	text-align:center;
+	margin:1%;
+	padding:0;
+	font-family: 'Ranchers', cursive;
+	color:#ffffff;
+	font-size:90px;
+}
+h2#formHeader{
+text-align:center;
+color:#BF3900;
+font-family: 'Fontdiner Swanky', cursive;
+}
+ul{
+	height:30px;
+}
+li{
+	font-family: 'Fontdiner Swanky', cursive;
+	/*text-decoration-style: none;*/
+	list-style: none;
+}
+
+button#searchButton{
+border-radius: 10px;
+width:200px;
+height: 50px;
+margin-top: 30%;
+font-size:40px;
+font-family: 'Ranchers', cursive;
+color:#660CE8;
+background-color:#EBF65B;
+
+}
+
+/*///////ID///////////////*/
+#threeColGrid{
+display:grid;
+grid-template-columns: 1fr .5fr 1.5fr;
+/*border:green dashed 1px;*/
+}
+
+#button{
+margin-top: -40px;
+}
+#result{
+display: grid;
+grid-template-columns: 1fr;
+/*grid-template-rows: 1fr repeat;*/
+margin: 0 auto;
+width:100%;
+height:100%;
+font-size:2em;
+/*border:green dashed 1px;*/
+font-size: 16px;
+}
+#result img{
+height:150px;
+max-width: 100%;	
+}
+#priceResult #distanceResult{
+display: grid;
+grid-template-columns: 1fr;
+margin: 0 auto;
+width:40%;
+height:10px;
+font-size:2em;
+padding: .3em;
+/*border:green dashed 1px;*/
+}

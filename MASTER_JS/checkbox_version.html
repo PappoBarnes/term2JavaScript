@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Hotel Search Assignment</title>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<link rel="stylesheet" type="text/css" href="css/assignment.css"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/assignment.css">
+		<link href="https://fonts.googleapis.com/css?family=Faster+One|Fontdiner+Swanky|Ranchers" rel="stylesheet">
+
+	</head>
+	<body>
+		<header>
+		 <img src="images/cheapHotels.jpg" alt="Cheap Hotels Sign">
+		 <h1 id=titleBanner>Cheap Hotels</h1>
+		</form>
+		</header>
+		<content id="threeColGrid">
+		<form>
+			
+		</fieldset>
+		<fieldset>
+			<h2 id="formHeader">Hotel Search</h2>
+		<!-- 	<label for="search">Enter the Hotel by name...</label>
+			<input id="search" type="text" placeholder="Hotel Name..."></input> -->
+			
+			
+		</fieldset>
+		<fieldset>
+			<legend>Select a Star Rating</legend>
+			<select id="ratingRange" value="">
+				<option value="5">5</option>
+				<option value="4">4</option>
+				<option value="3">3</option>
+				<option value="2">2</option>
+				<option value="1">1</option>
+			</select>
+			
+		</fieldset>
+		<fieldset>
+			<legend>Select a nightly budget</legend>
+			<label for="priceRange"></label> <br/>
+			£0<input id="priceRange" type="range"  min="0" max="300" step="5" value="35"/>£300
+			<!-- <p id="result"></p> -->
+			<!-- <button id="priceButton" type="button">Check Price</button> -->
+			<div id="priceResult">£0</div>
+			
+		</fieldset>
+		<fieldset>
+			<legend>Distance from the City Center</legend>
+			<label for="distanceRange"></label><br/>
+			0<input type="range" id="distanceRange" min="0" max="12" step="1" value="6">12 Miles
+			<div id="distanceResult">0 Miles</div>
+		</fieldset>
+	<fieldset>
+			<legend>Would you like Wifi</legend>
+			<label for="Wifi">Yes</label>
+			<input type="checkbox" value="Yes" id="wifiYes"> 
+		</fieldset>
+
+		<fieldset>
+			<legend>Would you like a Pool</legend>
+			<label for="Wifi">Yes</label>
+			<input type="checkbox" value="Yes" id="poolYes"> 
+			<!-- <button id="resetButton" type="reset" onClick="window.location.reload();">Reset Page</button> -->
+		</fieldset>
+		
+	</form>
+	
+	<div id="button">
+
+
+		<!-- <button id="searchButton" type="submit">Search</button> -->
+	
+			
+		</div>
+		<!-- <button id="searchButton" type="submit">Search</button>
+		<script src="js/processForm_test_v1.js" type="text/javascript"></script>
+			
+		</div> -->
+	<div id="result">
+			
+		</div>
+		<div id="button">
+			<button id="searchButton" type="submit">Search</button>
+				<script src="js/checkbox_version.js" type="text/javascript"></script>
+
+		</div>
+	</content>
+</body>
+</html>
+
+
+
+<!-- 
+
+
+	<fieldset>
+			<legend>Would you like Wifi</legend>
+			<label for="Wifi">Yes</label>
+			<input type="checkbox" value="yes" id="wifiYes"> 
+		</fieldset>
+
+		<fieldset>
+			<legend>Would you like a Pool</legend>
+			<label for="Wifi">Yes</label>
+			<input type="checkbox" value="yes" id="poolYes"> 
+			<button id="resetButton" type="reset" onClick="window.location.reload();">Reset Page</button>
+		</fieldset> -->
